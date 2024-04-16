@@ -36,32 +36,32 @@
 - **Test Set Performance**:
   - Logistic Regression: Accuracy: 0.94
 
-    |               | precision | recall | f1-score | support |
+    |               | Precision | Recall | F1-score | Support |
+    | ------------- | --------- | ------ | -------- | ------- |
     |  malignant    |   0.97    |  0.86  |    0.91  |      43 |
     |  benign       |   0.92    |  0.99  |    0.95  |      71 |
-    | ------------- | --------- | ------ | -------- | ------- |
-    |  accuracy     |           |        |    0.94  |     114 |
+    |               |           |        |          |         |
     |  macro avg    |   0.95    |  0.92  |    0.93  |     114 |
     |  weighted avg |   0.94    |  0.94  |    0.94  |     114 |
 
 
   - Support Vector Machine: Accuracy = 0.96
     
-    |               | precision | recall | f1-score | support |
+    |               | Precision | Recall | F1-score | Support |
+    | ------------- | --------- | ------ | -------- | ------- |
     |  malignant    |   0.97    |  0.91  |    0.94  |      43 |
     |  benign       |   0.95    |  0.99  |    0.97  |      71 |
-    | ------------- | --------- | ------ | -------- | ------- |
-    |  accuracy     |           |        |    0.96  |     114 |
+    |               |           |        |          |         |
     |  macro avg    |   0.96    |  0.95  |    0.95  |     114 |
     |  weighted avg |   0.96    |  0.96  |    0.96  |     114 |
 
   - Random Forest: Accuracy = 0.92
     
-    |               | precision | recall | f1-score | support |
+    |               | Precision | Recall | F1-score | Support |
+    | ------------- | --------- | ------ | -------- | ------- |
     |  malignant    |   0.97    |  0.81  |    0.89  |      43 |
     |  benign       |   0.90    |  0.99  |    0.94  |      71 |
-    | ------------- | --------- | ------ | -------- | ------- |
-    |  accuracy     |           |        |    0.92  |     114 |
+    |               |           |        |          |         |
     |  macro avg    |   0.93    |  0.90  |    0.91  |     114 |
     |  weighted avg |   0.93    |  0.92  |    0.92  |     114 |
 
