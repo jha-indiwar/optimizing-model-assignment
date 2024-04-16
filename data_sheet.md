@@ -1,43 +1,114 @@
-# Datasheet Template
+# Breast Cancer Wisconsin (Diagnostic) Data Set Characteristics
 
-As far as you can, complete the model datasheet. If you have got the data from the internet, you may not have all the information you need, but make sure you include all the information you do have. 
+## Dataset Information
 
-## Motivation
+- **Dataset Name**: Breast Cancer Wisconsin (Diagnostic) Data Set
+- **Dataset Source**: UCI Machine Learning Repository
+- **Data Collection Method**: Features were computed from digitized images of FNA of breast masses.
+- **Data Size**: 569 instances, 30 features
+- **Target Variable**: Diagnosis (malignant or benign)
 
-- For what purpose was the dataset created? 
-- Who created the dataset (e.g., which team, research group) and on behalf of which entity (e.g., company, institution, organization)? Who funded the creation of the dataset?
+## Feature Information
 
- 
-## Composition
+- **Number of Features**: 30
+- **Feature Types**: Numeric, predictive attributes and the class
+- **Attribute Information**: 
+  - radius (mean of distances from center to points on the perimeter)
+  - texture (standard deviation of gray-scale values)
+  - perimeter
+  - area
+  - smoothness (local variation in radius lengths)
+  - compactness (perimeter^2 / area - 1.0)
+  - concavity (severity of concave portions of the contour)
+  - concave points (number of concave portions of the contour)
+  - symmetry
+  - fractal dimension ("coastline approximation" - 1)
 
-- What do the instances that comprise the dataset represent (e.g., documents, photos, people, countries)? 
-- How many instances of each type are there? 
-- Is there any missing data?
-- Does the dataset contain data that might be considered confidential (e.g., data that is protected by legal privilege or by    doctor–patient confidentiality, data that includes the content of individuals’ non-public communications)?
+  The mean, standard error, and "worst" or largest (mean of the three
+  worst/largest values) of these features were computed for each image,
+  resulting in 30 features.  For instance, field 0 is Mean Radius, field
+  10 is Radius SE, field 20 is Worst Radius.
 
-## Collection process
+- **Summary Statistics**
+   ===================================== ====== ======
+                                           Min    Max
+    ===================================== ====== ======
+    radius (mean):                        6.981  28.11
+    texture (mean):                       9.71   39.28
+    perimeter (mean):                     43.79  188.5
+    area (mean):                          143.5  2501.0
+    smoothness (mean):                    0.053  0.163
+    compactness (mean):                   0.019  0.345
+    concavity (mean):                     0.0    0.427
+    concave points (mean):                0.0    0.201
+    symmetry (mean):                      0.106  0.304
+    fractal dimension (mean):             0.05   0.097
+    radius (standard error):              0.112  2.873
+    texture (standard error):             0.36   4.885
+    perimeter (standard error):           0.757  21.98
+    area (standard error):                6.802  542.2
+    smoothness (standard error):          0.002  0.031
+    compactness (standard error):         0.002  0.135
+    concavity (standard error):           0.0    0.396
+    concave points (standard error):      0.0    0.053
+    symmetry (standard error):            0.008  0.079
+    fractal dimension (standard error):   0.001  0.03
+    radius (worst):                       7.93   36.04
+    texture (worst):                      12.02  49.54
+    perimeter (worst):                    50.41  251.2
+    area (worst):                         185.2  4254.0
+    smoothness (worst):                   0.071  0.223
+    compactness (worst):                  0.027  1.058
+    concavity (worst):                    0.0    1.252
+    concave points (worst):               0.0    0.291
+    symmetry (worst):                     0.156  0.664
+    fractal dimension (worst):            0.055  0.208
+    ===================================== ====== ======
 
-- How was the data acquired? 
-- If the data is a sample of a larger subset, what was the sampling strategy? 
-- Over what time frame was the data collected?
+## Target Variable
 
-## Preprocessing/cleaning/labelling
+- **Target Variable Name**: Diagnosis
+- **Number of Classes**: 2
+- **Class Labels**: Malignant (0), Benign (1)
 
-- Was any preprocessing/cleaning/labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)? If so, please provide a description. If not, you may skip the remaining questions in this section. 
-- Was the “raw” data saved in addition to the preprocessed/cleaned/labeled data (e.g., to support unanticipated future uses)? 
- 
-## Uses
 
-- What other tasks could the dataset be used for? 
-- Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? For example, is there anything that a dataset consumer might need to know to avoid uses that could result in unfair treatment of individuals or groups (e.g., stereotyping, quality of service issues) or other risks or harms (e.g., legal risks, financial harms)? If so, please provide a description. Is there anything a dataset consumer could do to mitigate these risks or harms? 
-- Are there tasks for which the dataset should not be used? If so, please provide a description.
+**Copyright and References**    
 
-## Distribution
+This is a copy of UCI ML Breast Cancer Wisconsin (Diagnostic) datasets.
+https://goo.gl/U2Uwz2
 
-- How has the dataset already been distributed? 
-- Is it subject to any copyright or other intellectual property (IP) license, and/or under applicable terms of use (ToU)?  
+Features are computed from a digitized image of a fine needle
+aspirate (FNA) of a breast mass.  They describe
+characteristics of the cell nuclei present in the image.
 
-## Maintenance
+Separating plane described above was obtained using
+Multisurface Method-Tree (MSM-T) [K. P. Bennett, "Decision Tree
+Construction Via Linear Programming." Proceedings of the 4th
+Midwest Artificial Intelligence and Cognitive Science Society,
+pp. 97-101, 1992], a classification method which uses linear
+programming to construct a decision tree.  Relevant features
+were selected using an exhaustive search in the space of 1-4
+features and 1-3 separating planes.
 
-- Who maintains the dataset?
+The actual linear program used to obtain the separating plane
+in the 3-dimensional space is that described in:
+[K. P. Bennett and O. L. Mangasarian: "Robust Linear
+Programming Discrimination of Two Linearly Inseparable Sets",
+Optimization Methods and Software 1, 1992, 23-34].
 
+This database is also available through the UW CS ftp server:
+
+ftp ftp.cs.wisc.edu
+cd math-prog/cpo-dataset/machine-learn/WDBC/
+
+References:
+   - W.N. Street, W.H. Wolberg and O.L. Mangasarian. Nuclear feature extraction 
+     for breast tumor diagnosis. IS&T/SPIE 1993 International Symposium on 
+     Electronic Imaging: Science and Technology, volume 1905, pages 861-870,
+     San Jose, CA, 1993.
+   - O.L. Mangasarian, W.N. Street and W.H. Wolberg. Breast cancer diagnosis and 
+     prognosis via linear programming. Operations Research, 43(4), pages 570-577, 
+     July-August 1995.
+   - W.H. Wolberg, W.N. Street, and O.L. Mangasarian. Machine learning techniques
+     to diagnose breast cancer from fine-needle aspirates. Cancer Letters 77 (1994) 
+     163-171.
